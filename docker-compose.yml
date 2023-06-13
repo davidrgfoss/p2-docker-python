@@ -14,7 +14,7 @@ services:
       DJANGO_SUPERUSER_USERNAME: admin
       DJANGO_SUPERUSER_EMAIL: admin@admin.org
     ports:
-      - 8084:8006
+      - 8087:8006
     depends_on:
       - db_django
   db_django:
@@ -28,5 +28,11 @@ services:
       MARIADB_PASSWORD: django
     volumes:
       - mariadb_data_django:/var/lib/mysql
+    networks:
+      - net-mariatec
 volumes:
     mariadb_data_django:
+netwoks:
+  net-mariatec:
+    name: net-mariatec
+    external: true
