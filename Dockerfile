@@ -5,7 +5,7 @@ RUN apt-get install git && pip install --root-user-action=ignore --upgrade pip &
 RUN git clone https://github.com/Legnakra/django_tutorial.git /usr/src/app && mkdir static
 ADD ./polls.sh /usr/src/app/
 RUN chmod +x /usr/src/app/polls.sh
-ENV ALLOWED_HOSTS='*'
+ENV ALLOWED_HOSTS='djangod.davidrgfoss.com'
 ENV HOST=mariadb
 ENV USUARIO=django
 ENV CONTRA=django
