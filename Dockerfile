@@ -1,7 +1,7 @@
 FROM python:3
 WORKDIR /usr/src/app
 MAINTAINER davidrgfoss "davidrg@davidrgfoss.com"
-RUN pip install django mysqlclient && git clone https://github.com/davidrgfoss/p2-docker-python.git /usr/src/app && mkdir static && chmod + /usr/src/app/django_polls.sh
+RUN pip install django mysqlclient && git clone https://github.com/davidrgfoss/p2-docker-python.git /usr/src/app && mkdir static && chmod +x /usr/src/app/django_polls.sh
 ENV ALLOWED_HOSTS=*
 ENV HOST=mariadb
 ENV USUARIO=django
