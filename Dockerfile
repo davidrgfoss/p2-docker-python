@@ -1,7 +1,7 @@
 FROM python:3
 WORKDIR /usr/src/app
 MAINTAINER davidrgfoss "davidrg@davidrgfoss.com"
-RUN apt-get install git && pip install --root-user-action=ignore --upgrade pip && pip install --root-user-action=ignore django mysqlclient
+RUN apt-get install git && pip install django mysqlclient
 RUN git clone https://github.com/davidrgfoss/p2-docker-python.git /usr/src/app && mkdir static
 ADD ./mkpolls.sh /usr/src/app/
 RUN chmod +x /usr/src/app/mkpolls.sh
