@@ -5,7 +5,7 @@ RUN apt-get install git && pip install django mysqlclient
 RUN git clone https://github.com/davidrgfoss/p2-docker-python.git /usr/src/app && mkdir static
 ADD ./mkpolls.sh /usr/src/app/
 RUN chmod +x /usr/src/app/mkpolls.sh
-ENV ALLOWED_HOSTS='*'
+ENV ALLOWED_HOSTS='djangod.davidrgfoss.com'
 ENV HOST=mariadb
 ENV USUARIO=django
 ENV CONTRA=django
