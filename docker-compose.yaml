@@ -5,7 +5,7 @@ services:
     image: davidrgfoss/django:v1
     restart: always
     environment:
-      ALLOWED_HOSTS: "*"
+      ALLOWED_HOSTS: djangod.davidrgfoss.com
       HOST: bd_mariadb_django
       USUARIO: django
       CONTRA: django
