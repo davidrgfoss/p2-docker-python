@@ -17,8 +17,6 @@ services:
       - 8084:8006
     depends_on:
       - db_django
-    networks:
-      - net-django
   db_django:
     container_name: bd_mariadb_django
     image: mariadb:10.5
@@ -30,12 +28,6 @@ services:
       MARIADB_PASSWORD: django
     volumes:
       - mariadb_data_django:/var/lib/mysql
-    networks:
-      - net-django
 volumes:
     mariadb_data_django:
-networks:
-  net-django:
-    name: net-django
-    external: true
 
